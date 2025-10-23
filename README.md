@@ -2,6 +2,9 @@
 
 This is a binary image snapshot of my Windows x64 command-line
 firmware build environment for the Raspberry Pi Pico SDK 2.2.0.
+I created this specifically for my [Pinscape Pico](https://github.com/mjrgh/PinscapePico) project,
+but it's just the generic Pico SDK 2.2.0 - you can use it to
+build any Pico project.
 
 Up through SDK version 1.5.1, Raspberry Pi maintained a one-click
 installer for the Windows command-line build environment, at
