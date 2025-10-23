@@ -1,0 +1,6 @@
+D:/per/Visual Pinball Cabinet Project/pi-pico/pico-sdk-2.2.0/pico-sdk/tools/pioasm/CMakeFiles/pioasm.dir
+D:/per/Visual Pinball Cabinet Project/pi-pico/pico-sdk-2.2.0/pico-sdk/tools/pioasm/CMakeFiles/edit_cache.dir
+D:/per/Visual Pinball Cabinet Project/pi-pico/pico-sdk-2.2.0/pico-sdk/tools/pioasm/CMakeFiles/rebuild_cache.dir
+D:/per/Visual Pinball Cabinet Project/pi-pico/pico-sdk-2.2.0/pico-sdk/tools/pioasm/CMakeFiles/list_install_components.dir
+D:/per/Visual Pinball Cabinet Project/pi-pico/pico-sdk-2.2.0/pico-sdk/tools/pioasm/CMakeFiles/install.dir
+D:/per/Visual Pinball Cabinet Project/pi-pico/pico-sdk-2.2.0/pico-sdk/tools/pioasm/CMakeFiles/install/local.dir
