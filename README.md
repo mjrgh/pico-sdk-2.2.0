@@ -10,12 +10,15 @@ since been deprecated, replaced with a VS Code extension, at
 https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico.
 See also [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
 
-I created this snapshot because the VS Code extension still seems to 
-be a work-in-progress, to such an extent that I can't even get it to
-install on my system.  I tend to prefer a command-line setup anyway,
-for more flexibility in selecting editors and other tools, but for now
-it seems to be my only option since I can't get the official VS Code
-package to work.
+This snapshot of Pico SDK 2.2.0 reprises my [2.1.0 snapshot](https://github.com/mjrgh/pico-sdk-2.1.0),
+which I created because I couldn't get Rasbperry Pi's official VS Code
+installer to work.  It was also necessary because the SDK 2.1.0 library
+contained some source code errors that broke the C++ build.  SDK 2.2.0
+fixes the library errors, but I don't know if they fixed the VS Code
+installer; I didn't even bother trying it after my unpleasant
+experience with 2.1.0.  The manual install procedure I developed
+for the 2.1.0 SDK is streamlined enough that it was easier to just
+repeat that.
 
 ## How to install
 
