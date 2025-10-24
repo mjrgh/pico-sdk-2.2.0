@@ -81,23 +81,22 @@ the parts that changed in the 2.2.0 SDK:
   - 2.2.0 picotool
 
 The 1.5.1 SDK sets up a bunch of build tools that are needed.  As
-always with open-source projects, you need a steaming pile of
-Linux-world build tools with specific version numbers, so it's a
-nightmare to cobble it all together by hand.  These are third-party
-tools like git, ninja, python, and cmake that aren't part of a basic
-Windows setup, and which tend to have incompatible changes often
+always with open-source projects, building requires a steaming pile of
+Linux-world build tools and libraries with specific version numbers, so it's
+a nightmare to cobble together all of the dependencies by hand.  These are
+third-party tools like git, ninja, python, and cmake that aren't part of
+a basic Windows setup, and which tend to have incompatible changes often
 enough that Linux build procedures always insist on *specific*
-versions being installed.  It's never enough to have python, you have
-to have python 3.6.7.12 exactly, or nothing works.  And all of these
-are distributed in source-code form, so you can't just download a 
-SETUP program for most of them; you have to download the source and
-then build it yourself, which is often difficult on Windows because
-the build processes depend on a bunch of Linux-specific tools.  It
-becomes a bottomless cascade of tracking down dependencies for the
-dependencies.  The magic of the
-automated 1.5.1 installer was that it included all of the required
-third-party tools at their required version levels, all pre-built and
-pre-packaged, so we didn't have to go through the arduous procedure of
+versions being installed.  It's never enough to have python; you have
+to have python 3.6.7.12 exactly for one component, and python 2.4.5.2 for
+another, and python 2.4.5.3 for yet another, or nothing works.  And all
+of those are *also* distributed in source-code form, so you can't just
+download a SETUP program for most of them; you have to download the source
+for the tool or library and then build it yourself, so it becomes a
+bottomless cascade of tracking down dependencies for the dependencies.
+The magic of the automated 1.5.1 installer was that it included all of the
+required third-party tools at their required version levels, all pre-built
+and pre-packaged, so we didn't have to go through the arduous procedure of
 finding and installing all of the *additional* build tools needed to
 *build the build tools*.  Fortunately, the newer SDK seems happy to
 work smoothly with most of the same build tool versions as the older
@@ -115,7 +114,7 @@ The second thing that's important to update in the new SDK is the
 Arm GNU toolchain.  The VS Code configuration has a list of the
 acceptable toolchain versions, so I picked the most recent (13.3.Rel1)
 on the list.  This is also a fairly easy update, because Arm maintains
-an official collection of GNU cross-compiler toolchain versions for its 
+an official collection of GNU cross-compiler toolchain versions for its
 CPUs (the Pico RP2040 CPU is Arm-based), and does a nice job of
 packaging them for the major platforms, including Windows.  And
 once installed, the GNU tool set is all nicely self-contained, so
