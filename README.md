@@ -6,28 +6,31 @@ I created this specifically for my [Pinscape Pico](https://github.com/mjrgh/Pins
 but it's just the generic Pico SDK 2.2.0 - you can use it to
 build any Pico project.
 
-Up through SDK version 1.5.1, Raspberry Pi maintained a one-click
-installer for the Windows command-line build environment, at
-https://github.com/raspberrypi/pico-setup-windows/.  That has 
-since been deprecated, replaced with a VS Code extension, at
+The motivation for creating this snapshot is that I was unable to get
+the official 2.1.0 SDK from Raspberry Pi to install properly on
+Windows.  Raspberry Pi started packaging the SDK as of v2.1.0 as a VS
+Code extension package rather than as a native Windows installer, and
+for whatever reason, that just didn't work on my machine.  I
+discovered that many other people were reporting similar problems, so
+I decided not to waste more time on that, and just installed the SDK
+from source instead.  I don't know if the VS Code problems carried
+over into 2.2.0, but I don't really care, since I was able to apply
+the same install-from-source procedure from 2.1.0.  The install-from-source
+procedure is straightforward but tedious, so I thought I'd post a snapshot
+here to save other people the trouble.
+
+The official VS Code installer can be found at
 https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico.
 See also [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
 
-This snapshot of Pico SDK 2.2.0 reprises my [2.1.0 snapshot](https://github.com/mjrgh/pico-sdk-2.1.0),
-which I created because I couldn't get Rasbperry Pi's official VS Code
-installer to work.  It was also necessary because the SDK 2.1.0 library
-contained some source code errors that broke the C++ build.  SDK 2.2.0
-fixes the library errors, but I don't know if they fixed the VS Code
-installer; I didn't even bother trying it after my unpleasant
-experience with 2.1.0.  The manual install procedure I developed
-for the 2.1.0 SDK is streamlined enough that it was easier to just
-repeat that.
 
-## How to install
+## How to install this snapshot
 
-This snapshot is designed to be fully self-contained, following the
-pattern of the official SDK 1.5.1 Windows setup.  There's no
-installer; it's just a literal copy of my directory structure.
+This snapshot is designed to be self-contained, following the pattern
+of the old official SDK 1.5.1 Windows setup (the last one that worked
+properly for me).  No installer is needed; this is just a literal copy
+of my directory structure, and all you have to do to "install" it is
+copy the whole thing into a local folder.
 
 * Copy this entire directory tree to a location on your hard disk, say c:\pico-sdk-2.2.0
 
