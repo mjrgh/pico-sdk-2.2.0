@@ -111,15 +111,14 @@ same directory structure.  We can replicate this by cloning the git
 and checking out the desired version tag.
 
 The second thing that's important to update in the new SDK is the
-Arm GNU toolchain.  The VS Code configuration has a list of the
-acceptable toolchain versions, so I picked the most recent (13.3.Rel1)
-on the list.  This is also a fairly easy update, because Arm maintains
-an official collection of GNU cross-compiler toolchain versions for its
-CPUs (the Pico RP2040 CPU is Arm-based), and does a nice job of
-packaging them for the major platforms, including Windows.  And
-once installed, the GNU tool set is all nicely self-contained, so
-we can just make a snapshot of its install directory to include in our
-updated build tree.
+Arm GNU toolchain.  The SDK 2.2.0 configuration appears to call for version
+14.3.Rel1 of the GNU toolchain.  This is also a fairly easy update, because
+Arm maintains an official collection of GNU cross-compiler toolchain
+versions for its CPUs (the Pico RP2040 CPU is Arm-based), and does a nice
+job of packaging them for the major platforms, including Windows, as
+pre-built binaries with native installers.  And once installed, the GNU
+toolchain is all nicely self-contained, so we can just make a snapshot of
+its install directory to include in our updated build tree.
 
 The only remaining loose end is "picotool", a custom tool that Raspberry
 Pi provides.  That's really only needed because the CMake script
@@ -131,4 +130,3 @@ it just assumes that it's a requirement, even when the project doesn't
 care about it.  Fortunately, it's not too hard to build on Windows,
 so building it seemed like the easiest way to resolve the script
 complaint.  Besides, some projects might actually need it.
-
