@@ -42,7 +42,7 @@ PICO_REG_KEY=Software\Raspberry Pi\Pico SDK v2.2.0
    * Scroll down to 14.3.Rel1
    * Find the "Windows (mingw-w64-x86_64) hosted cross toolchains" section
    * Run the .exe installer from that list
-   * When the installer asks for the destination path, enter <your sdk path>\gcc-arm-none-eabi
+   * When the installer asks for the destination path, enter `<your sdk path>\gcc-arm-none-eabi`
 
 * Install the 2.2.0 SDK
    * git clone https://github.com/raspberrypi/pico-sdk
