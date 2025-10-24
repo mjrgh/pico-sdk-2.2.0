@@ -120,13 +120,12 @@ pre-built binaries with native installers.  And once installed, the GNU
 toolchain is all nicely self-contained, so we can just make a snapshot of
 its install directory to include in our updated build tree.
 
-The only remaining loose end is "picotool", a custom tool that Raspberry
-Pi provides.  That's really only needed because the CMake script
-irritatingly insists on checking that it's present and up-to-date,
-and bombs out early in the project build if it's not.  I say
-"irritating" because the CMake script doesn't bother to check
-whether or not the project it's building actually needs picotool;
-it just assumes that it's a requirement, even when the project doesn't
-care about it.  Fortunately, it's not too hard to build on Windows,
-so building it seemed like the easiest way to resolve the script
-complaint.  Besides, some projects might actually need it.
+The only remaining loose ends are "picotool" and "pioasm", custom
+tools that Raspberry Pi provides.  The picotool dependency is mostly
+just for the sake of satisfying the cmake configuration checker, but I
+didn't want to mess with that so it's needed even though I don't
+actually use it in my Pinscape Pico project.  pioasm is something you
+genuinely need if you're using the Pico's PIO facilities, which
+Pinscape Pico does extensively.  These are simple programs with
+minimal dependencies and working CMAKE configurations, so they're
+straightforward to build using the procedures described above.
